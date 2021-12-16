@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Úkol - Geo API">
+    <meta name="author" content="David Červenec"/>
+    <script src="https://api.mapy.cz/loader.js"></script>
+    <script async>Loader.load()</script>
+    <link rel="icon" href="marker.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Úkol - Geo API</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="soft-shadow">Vzdálenost mezi aktuální pozicí a&nbsp;budovou VŠE</h1>
+      <div id="map" class="soft-shadow load">⌛ Waiting for location data.</div>
+
+      <div class="data-container">
+        <div class="distance-container">
+          <section class="soft-shadow">
+            <h2>Vzdálenost</h2>
+            <p id="flight-distance">⌛ Waiting for location data.</p>
+            <p id="route-distance">⌛ Waiting for location data.</p>
+          </section>
+
+          <div class="location-container">
+            <section class="soft-shadow current-location-wrapper">
+              <h2>Vaše pozice</h2>
+              <p id="current-location">⌛ Waiting for location data.</p>
+            </section>
+
+            <section class="soft-shadow">
+              <h2>Pozice VŠE</h2>
+              <p id="target-location"></p>
+            </section>
+
+            <section class="soft-shadow">
+              <h2>Kontakt</h2>
+              <a href="mailto:cerd14@vse.cz">cerd14<br/>David Červenec</a>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

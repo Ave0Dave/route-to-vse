@@ -1,0 +1,147 @@
+:root {
+  --color-white: #E5E9F0;
+}
+
+* { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  
+  height: 100%;
+ 
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6em;
+
+  background: var(--color-white);
+  text-rendering: optimizeLegibility;
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  
+  max-width: 90ch;
+  margin: 0 1.2em;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 7vw, 2.3rem);
+  line-height: 1em;
+  text-align: center;
+  margin-top: 0.5em ;
+}
+
+h2 {
+  padding-bottom: 0.5em;
+}
+
+p {
+  margin-bottom: 0.2em;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+  margin: 2.2em;
+
+  touch-action: none;
+}
+
+.data-container {
+  width: 100%;
+}
+
+.location-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 2.2em;
+}
+
+.location-container > * {
+  height: 8em;
+}
+
+.distance-container {
+  width: 100%;
+}
+
+#flight-distance {
+  border-radius: 0.5em;
+  padding: 0.1em 0.5em;
+  background: rgba(255, 105, 180, 0.247);
+}
+
+#route-distance {
+  border-radius: 0.5em;
+  padding: 0.1em 0.5em;
+  background: rgba(0, 60, 255, 0.308);
+}
+
+.soft-shadow {
+  border-radius: 0.5em;
+  padding: 1.4rem;
+  background: #e5e9f0;
+  box-shadow:  19px 19px 38px #c3c6cc,
+              -19px -19px 38px #ffffff;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+address {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-self: flex-start;
+  
+  width: fit-content;
+  font-style: normal;
+}
+
+a {
+  color: #000;
+  text-decoration-color: transparent;
+  text-decoration-style: wavy;
+  font-style: normal;
+
+  transition: 200ms ease-in;
+}
+
+a:hover {
+  text-decoration-color: rgba(255, 105, 180, 0.63);
+}
+
+@media screen and (max-width: 750px) {
+  .location-container {
+    margin-top: 1em;
+  }
+  
+  .location-container > * {
+    margin: 1.2em auto;
+  }
+}
